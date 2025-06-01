@@ -15,6 +15,22 @@
     <button onclick="showPage('distancePage')" class="bg-green-500 text-white px-3 py-1 rounded">Distance</button>
     <button onclick="showPage('temperaturePage')" class="bg-red-500 text-white px-3 py-1 rounded">Temperature</button>
   </nav>
-  
+   <!-- Weight Converter -->
+  <div id="weightPage" class="page active bg-white p-4 rounded shadow-md">
+    <h2 class="text-xl font-bold mb-2">Weight Converter</h2>
+    <form onsubmit="handleConvert(event, 'weight')">
+      <select id="fromWeight" class="border p-1">
+        <option value="kg">Kilograms</option>
+        <option value="lb">Pounds</option>
+      </select>
+      <select id="toWeight" class="border p-1">
+        <option value="lb">Pounds</option>
+        <option value="kg">Kilograms</option>
+      </select>
+      <input type="text" id="inputWeight" class="border p-1 w-full mt-2" placeholder="Enter value(s)">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded mt-2">Convert</button>
+      <p id="resultWeight" class="mt-2 font-semibold"></p>
+    </form>
+  </div>
   </body>
 </html>
