@@ -30,6 +30,24 @@
       <input type="text" id="inputWeight" class="border p-1 w-full mt-2" placeholder="Enter value(s)">
       <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded mt-2">Convert</button>
       <p id="resultWeight" class="mt-2 font-semibold"></p>
+       <!-- Temperature Converter -->
+  <div id="temperaturePage" class="page bg-white p-4 rounded shadow-md">
+    <h2 class="text-xl font-bold mb-2">Temperature Converter</h2>
+    <form onsubmit="handleConvert(event, 'temperature')">
+      <select id="fromTemp" class="border p-1">
+        <option value="c">Celsius</option>
+        <option value="f">Fahrenheit</option>
+      </select>
+      <select id="toTemp" class="border p-1">
+        <option value="f">Fahrenheit</option>
+        <option value="c">Celsius</option>
+      </select>
+      <input type="text" id="inputTemp" class="border p-1 w-full mt-2" placeholder="Enter value(s)">
+      <button type="submit" class="bg-red-500 text-white px-4 py-1 rounded mt-2">Convert</button>
+      <p id="resultTemp" class="mt-2 font-semibold"></p>
+    </form>
+  </div>
+      
     </form>
   </div>
   </body>
