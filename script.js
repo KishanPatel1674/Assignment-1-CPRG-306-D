@@ -54,5 +54,14 @@ case 'distance':
         } else {
           converted = val;
         }
-        break;       
+        break;  
+    }
+     
+
+    resultText += val + ' ' + fromUnit + ' = ' + converted.toFixed(2) + ' ' + toUnit + '<br>';
+  }
+
+  document.getElementById(resultId).innerHTML = resultText;
+}
+
         
