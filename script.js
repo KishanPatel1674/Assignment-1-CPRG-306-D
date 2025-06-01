@@ -46,3 +46,13 @@ case 'distance':
           converted = val;
         }
         break;
+ case 'distance':
+        if (fromUnit === 'km' && toUnit === 'mi') {
+          converted = val * 0.621371;
+        } else if (fromUnit === 'mi' && toUnit === 'km') {
+          converted = val / 0.621371;
+        } else {
+          converted = val;
+        }
+        break;       
+        
