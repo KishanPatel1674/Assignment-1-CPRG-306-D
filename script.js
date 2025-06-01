@@ -24,6 +24,12 @@ case 'distance':
       inputValue = document.getElementById('inputDistance').value;
       resultId = 'resultDistance';
       break;
+      case 'temperature':
+      fromUnit = document.getElementById('fromTemp').value;
+      toUnit = document.getElementById('toTemp').value;
+      inputValue = document.getElementById('inputTemp').value;
+      resultId = 'resultTemp';
+      break;
   }
   var values = inputValue.split(',');
   var resultText = '';
@@ -54,7 +60,16 @@ case 'distance':
         } else {
           converted = val;
         }
-        break;  
+        break; 
+         case 'temperature':
+        if (fromUnit === 'c' && toUnit === 'f') {
+          converted = (val * 9 / 5) + 32;
+        } else if (fromUnit === 'f' && toUnit === 'c') {
+          converted = (val - 32) * 5 / 9;
+        } else {
+          converted = val;
+        }
+        break;
     }
      
 
