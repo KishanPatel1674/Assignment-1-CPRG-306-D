@@ -18,3 +18,9 @@ function handleConvert(event, type) {
       inputValue = document.getElementById('inputWeight').value;
       resultId = 'resultWeight';
       break;
+case 'distance':
+      fromUnit = document.getElementById('fromDistance').value;
+      toUnit = document.getElementById('toDistance').value;
+      inputValue = document.getElementById('inputDistance').value;
+      resultId = 'resultDistance';
+      break;
