@@ -24,3 +24,25 @@ case 'distance':
       inputValue = document.getElementById('inputDistance').value;
       resultId = 'resultDistance';
       break;
+  }
+  var values = inputValue.split(',');
+  var resultText = '';
+
+  for (var i = 0; i < values.length; i++) {
+    var val = parseFloat(values[i].trim());
+    if (isNaN(val)) {
+      resultText += 'Invalid input: ' + values[i] + '<br>';
+      continue;
+    }
+
+    var converted;
+    switch (type) {
+      case 'weight':
+        if (fromUnit === 'kg' && toUnit === 'lb') {
+          converted = val * 2.20462;
+        } else if (fromUnit === 'lb' && toUnit === 'kg') {
+          converted = val / 2.20462;
+        } else {
+          converted = val;
+        }
+        break;
